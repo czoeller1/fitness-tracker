@@ -22,7 +22,7 @@ function generatePalette() {
 }
 
 function populateChart(data) {
-  console.log(data);
+  //console.log(data);
   let durations = data.map((workout) => {
     let durr = 0;
     workout.exercises.forEach(({ duration }) => (durr += duration));
