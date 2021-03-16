@@ -30,6 +30,10 @@ module.exports = (app) => {
     db.Workout.find({})
       .sort({ day: -1 })
       .limit(7)
-      .then((workouts) => res.json(workouts));
+      .then((workouts) => {
+        //console.log(workouts);
+
+        res.json(workouts);
+      });
   });
 };
