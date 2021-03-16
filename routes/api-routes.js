@@ -1,8 +1,11 @@
-const db = require("..models/");
+const db = require("../models/models");
 
 module.exports = (app) => {
   app.get("/api/workouts", (req, res) => {
-    db.Workout.find({}).then((data) => res.json(data));
+    db.Workout.find({}).then((data) => {
+      console.log(data);
+      res.json(data);
+    });
   });
 
   app.put("/api/workouts/:id", (req, res) => {
