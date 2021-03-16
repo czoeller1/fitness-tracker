@@ -2,6 +2,7 @@ const db = require("../models/models");
 
 module.exports = (app) => {
   app.get("/api/workouts", (req, res) => {
+    console.log("\n\nWORKOUTS\n\n");
     db.Workout.find({}).then((data) => {
       console.log(data);
       res.json(data);
